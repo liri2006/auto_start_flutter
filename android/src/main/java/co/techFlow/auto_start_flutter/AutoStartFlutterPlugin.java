@@ -45,7 +45,7 @@ public class AutoStartFlutterPlugin implements FlutterPlugin, MethodCallHandler 
     if(call.method.equals("permit-auto-start")){
       addAutoStartup();
     } else  if (call.method.equals("isAutoStartPermission")) {
-      result.success(AutoStartPermissionHelper.Companion.getInstance().isAutoStartPermissionAvailable(context));
+      result.success(AutoStartPermissionHelper.getInstance().isAutoStartPermissionAvailable(context));
     }else {
       result.notImplemented();
     }
